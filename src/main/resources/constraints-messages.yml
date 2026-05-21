@@ -1,0 +1,8 @@
+app:
+  constraints:
+    messages:
+      companies_email_key: "A company with this email already exists"
+      companies_slug_key: "A company with this slug already exists"
+      companies_document_key: "A company with this document already exists"
+      queue_name_company: "A queue with this name already exists for this company"
+      agent_email: "An agent with this email already exists for this company"

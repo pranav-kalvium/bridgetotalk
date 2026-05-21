@@ -1,0 +1,5 @@
+info:
+  app:
+    name: ${spring.application.name}
+    description: BridgeToTalk API (Production)
+    version: ${APP_VERSION:unknown}
