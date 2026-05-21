@@ -1,0 +1,20 @@
+package com.pranav.bridgetotalk.adapter.in.web.dto.queue;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.pranav.bridgetotalk.domain.attendance.DistributionStrategy;
+import com.pranav.bridgetotalk.domain.attendance.QueueSettings;
+
+import java.time.Instant;
+import java.util.UUID;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public record ResponseQueueDto(
+        UUID id,
+        String name,
+        DistributionStrategy distributionStrategy,
+        Instant createdAt,
+        Instant updatedAt,
+        Instant deletedAt,
+        QueueSettings settings
+) {
+}

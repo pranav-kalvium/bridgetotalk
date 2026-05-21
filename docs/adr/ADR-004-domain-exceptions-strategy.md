@@ -1,10 +1,10 @@
-# ADR-004 – Domain Exceptions Strategy
+# ADR-004 â€“ Domain Exceptions Strategy
 
 ## Status
 Accepted
 
 ## Date
-2025-12-19
+2026-05-21
 
 ## Context
 
@@ -48,11 +48,11 @@ following principles:
 
 ### Subdomain-specific exceptions
 
-- AgentNotFoundException → people
+- AgentNotFoundException â†’ people
 
-- QueueNotFoundException → attendance
+- QueueNotFoundException â†’ attendance
 
-- CompanyNotFoundException → organization
+- CompanyNotFoundException â†’ organization
 
 Located close to the domain concepts they represent.
 

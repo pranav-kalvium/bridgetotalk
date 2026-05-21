@@ -1,0 +1,7 @@
+package com.pranav.bridgetotalk.domain.organization;
+
+public enum CompanyStatus {
+    ACTIVE,     // empresa ativa e operando normalmente
+    SUSPENDED,  // pagamentos atrasados / excedeu limites
+    INACTIVE   // soft delete
+}

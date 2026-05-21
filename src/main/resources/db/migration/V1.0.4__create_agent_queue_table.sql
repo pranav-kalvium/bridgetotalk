@@ -1,14 +1,14 @@
 -- Migration: Create agent_queues join table
 -- Description: Links agents and queues (N:N relationship)
--- Author: Renan Resende
+-- Author: Pranav
 -- Date: 12/2025
 
 CREATE TABLE agent_queues (
                               agent_id UUID NOT NULL,
                               queue_id UUID NOT NULL,
 
-    -- Metadados da relação
-                              priority INT DEFAULT 1 NOT NULL, -- 1 = Alta, 2 = Média, etc.
+    -- Metadados da relaÃ§Ã£o
+                              priority INT DEFAULT 1 NOT NULL, -- 1 = Alta, 2 = MÃ©dia, etc.
                               added_at TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL,
 
     -- Constraints de Integridade
@@ -21,11 +21,11 @@ CREATE TABLE agent_queues (
                                   REFERENCES queues(id) ON DELETE CASCADE
 );
 
--- Índices para performance
--- O PK já indexa (agent_id, queue_id).
+-- Ãndices para performance
+-- O PK jÃ¡ indexa (agent_id, queue_id).
 -- index para o caminho inverso (buscar todos os agentes de uma fila):
 CREATE INDEX idx_aq_queue ON agent_queues(queue_id);
 
--- Comentários
+-- ComentÃ¡rios
 COMMENT ON TABLE agent_queues IS 'Associative table linking agents to their assigned queues (Many-to-Many)';
 COMMENT ON COLUMN agent_queues.priority IS 'Priority level of the agent in this specific queue';

@@ -1,6 +1,6 @@
 -- Migration: Create agents table
 -- Description: Creates the agents table with UUID generation handled by the database
--- Author: Renan Resende
+-- Author: Pranav
 -- Date: 11/2025
 
 -- Create extension for UUID generation (PostgreSQL)

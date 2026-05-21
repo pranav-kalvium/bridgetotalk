@@ -12,14 +12,14 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.renanresende</groupId>
+    <groupId>com.pranav</groupId>
     <artifactId>bridgetotalk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <java.version>25</java.version>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <java.version>24</java.version>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -102,14 +102,14 @@
             <version>3.20.0</version>
         </dependency>
 
-        <!-- Java Faker para dados realistas -->
+        <!-- Java Faker for realistic data -->
         <dependency>
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>
             <version>2.5.3</version>
         </dependency>
 
-        <!-- Testes -->
+        <!-- Tests -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

@@ -1,6 +1,6 @@
 -- Migration: Create queues table
 -- Description: Creates the queues table with UUID generation handled by the database
--- Author: Renan Resende
+-- Author: Pranav
 -- Date: 12/2025
 
 -- Create extension for UUID generation (PostgreSQL)

@@ -1,10 +1,10 @@
-# ADR-003 – Queue Business Hours Modeling
+# ADR-003 â€“ Queue Business Hours Modeling
 
 ## Status
 Accepted
 
 ## Date
-2025-12-19
+2026-05-21
 
 ## Context
 

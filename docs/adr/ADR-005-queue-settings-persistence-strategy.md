@@ -1,10 +1,10 @@
-# ADR-005 – Queue Settings Persistence Strategy
+# ADR-005 â€“ Queue Settings Persistence Strategy
 
 ## Status
 Accepted
 
 ## Date
-2025-01-19
+2026-05-21
 
 ## Context
 
@@ -47,7 +47,7 @@ No NoSQL database will be introduced for QueueSettings at this stage.
 
 ## Alternatives Considered
 
-### Option 1 – Fully Normalized Relational Model
+### Option 1 â€“ Fully Normalized Relational Model
 
 Persist QueueSettings, WeeklySchedule, DailySchedule and TimeRange as
 separate relational tables with explicit relationships.
@@ -65,7 +65,7 @@ separate relational tables with explicit relationships.
 
 ---
 
-### Option 2 – NoSQL Store for QueueSettings
+### Option 2 â€“ NoSQL Store for QueueSettings
 
 Persist QueueSettings in a document-oriented NoSQL database while keeping
 Queue in a relational database.
@@ -82,7 +82,7 @@ Queue in a relational database.
 
 ---
 
-### Option 3 – Hybrid Relational + JSON (Chosen)
+### Option 3 â€“ Hybrid Relational + JSON (Chosen)
 
 Persist Queue as a relational entity while storing complex configuration
 structures inside JSON columns.

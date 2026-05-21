@@ -1,10 +1,10 @@
-# ADR-XXX – <Title>
+# ADR-XXX â€“ <Title>
 
 ## Status
 Proposed | Accepted | Rejected | Superseded
 
 ## Date
-YYYY-MM-DD
+2026-05-21
 
 ## Context
 
@@ -23,7 +23,7 @@ This section should be concise and unambiguous.
 
 ## Alternatives Considered
 
-### Option 1 – <Name>
+### Option 1 â€“ <Name>
 Brief description.
 
 **Pros:**
@@ -34,7 +34,7 @@ Brief description.
 
 ---
 
-### Option 2 – <Name>
+### Option 2 â€“ <Name>
 Brief description.
 
 **Pros:**

@@ -1,10 +1,10 @@
-# ADR-002 – Domain Organization into Subdomains
+# ADR-002 â€“ Domain Organization into Subdomains
 
 ## Status
 Accepted
 
 ## Date
-2025-12-19
+2026-05-21
 
 ## Context
 

@@ -1,7 +1,7 @@
 -- =========================================================
 -- Migration: Create queue_settings table
 -- Description: Stores configuration settings for queues
--- Author: Renan Resende
+-- Author: Pranav
 -- Date: 12/2025
 -- =========================================================
 

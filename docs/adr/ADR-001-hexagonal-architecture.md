@@ -1,10 +1,10 @@
-# ADR-001 – Adoption of Hexagonal Architecture
+# ADR-001 â€“ Adoption of Hexagonal Architecture
 
 ## Status
 Accepted
 
 ## Date
-2025-12-19
+2026-05-21
 
 ## Context
 
@@ -40,7 +40,7 @@ through ports.
 
 ## Alternatives Considered
 
-### 1. Traditional Layered Architecture (Controller → Service → Repository)
+### 1. Traditional Layered Architecture (Controller â†’ Service â†’ Repository)
 
 - Simpler initial setup
 - Less boilerplate code
@@ -77,7 +77,7 @@ through ports.
 - Higher amount of boilerplate code
 - Slower initial development speed
 
-These trade-offs are considered acceptable given the project’s learning
+These trade-offs are considered acceptable given the projectâ€™s learning
 goals and long-term vision.
 
 ## Notes
