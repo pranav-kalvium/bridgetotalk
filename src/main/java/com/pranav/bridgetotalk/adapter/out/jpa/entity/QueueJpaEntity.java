@@ -40,6 +40,7 @@ public class QueueJpaEntity {
     @Column(name = "deleted_at")
     private Instant deletedAt;
 
+    @Builder.Default
     @OneToMany(
             mappedBy = "queue",
             cascade = CascadeType.ALL,

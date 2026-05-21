@@ -12,8 +12,6 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 )
 public interface AgentCommandMapper {
 
-    AgentJpaEntity toEntity(CreateAgentCommand command);
-
     default Agent toDomain(CreateAgentCommand command){
         return Agent.createNew(
                 command.companyId(),

@@ -25,5 +25,6 @@ public interface AgentJpaMapper {
         );
     }
 
+    @org.mapstruct.Mapping(target = "queues", ignore = true)
     AgentJpaEntity toEntity(Agent agent);
 }

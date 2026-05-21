@@ -48,6 +48,8 @@ public interface CompanyJpaMapper {
     );
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @org.mapstruct.Mapping(target = "companyId", ignore = true)
+    @org.mapstruct.Mapping(target = "company", ignore = true)
     void updateSettingsEntityFromDomain(
             CompanySettings domain,
             @MappingTarget CompanySettingsJpaEntity entity
@@ -74,6 +76,8 @@ public interface CompanyJpaMapper {
         );
     }
 
+    @org.mapstruct.Mapping(target = "companyId", ignore = true)
+    @org.mapstruct.Mapping(target = "company", ignore = true)
     CompanySettingsJpaEntity toSettingsEntityFromDomain(CompanySettings domain);
 
     CompanySettings companySettingsJpaEntityToCompanySettings(

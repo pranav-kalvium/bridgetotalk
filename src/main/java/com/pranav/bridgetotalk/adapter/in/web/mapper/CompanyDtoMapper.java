@@ -32,6 +32,7 @@ public interface CompanyDtoMapper {
         );
     }
 
+    @Mapping(target = "plan", source = "settings.plan")
     CreateCompanyDto toCreateCompanyDto(Company company);
 
     @Mapping(target = "id", source = "id")

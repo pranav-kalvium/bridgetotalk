@@ -53,6 +53,7 @@ public class AgentJpaEntity {
     @Column(name = "active_conversations", nullable = false)
     private int activeConversations;
 
+    @Builder.Default
     @OneToMany(
             mappedBy = "agent",
             cascade = CascadeType.ALL,
