@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Validador para a anotaÃ§Ã£o @ValidEnum.
- * Valida se um valor string corresponde a um dos valores do enum especificado.
+ * Validator for the @ValidEnum annotation.
+ * Validates if a string value matches one of the specified enum values.
  */
 public class EnumValueValidator implements ConstraintValidator<ValidEnum, String> {
 
@@ -28,6 +28,6 @@ public class EnumValueValidator implements ConstraintValidator<ValidEnum, String
             return true;
         }
 
-        return acceptedValues.contains(value.toUpperCase()); // exemplo case-insensitive
+        return acceptedValues.contains(value.toUpperCase()); // Case-insensitive check
     }
 }

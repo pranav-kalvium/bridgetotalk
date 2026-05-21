@@ -1,14 +1,14 @@
 ---
 name: "Feature Request"
-about: Solicitar novo recurso
+about: Request a new feature
 title: "[FEATURE] "
 ---
 
-## ✨ Descrição
-Explique a funcionalidade desejada.
+## ✨ Description
+Explain the desired feature.
 
-## 🎯 Objetivo
-Por que isso é necessário?
+## 🎯 Goal
+Why is this necessary?
 
-## 📚 Detalhes adicionais
-Adicione qualquer informação extra.
+## 📚 Additional Details
+Add any extra information.

@@ -16,7 +16,7 @@ spring:
 
 management:
   server:
-    port: 8080 # opcional: pode separar porta se quiser (ex: 8081)
+    port: 8080 # optional: can separate port if desired (e.g. 8081)
   endpoints:
     web:
       base-path: /actuator

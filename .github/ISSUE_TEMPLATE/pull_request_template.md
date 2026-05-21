@@ -1,21 +1,21 @@
-## 📝 Descrição
-Descreva claramente o que esta PR faz.
+## 📝 Description
+Clearly describe what this PR does.
 
-## 🔀 Tipo da PR
+## 🔀 PR Type
 - [ ] Feature
 - [ ] Fix
 - [ ] Hotfix
 - [ ] Refactor
 - [ ] Release
 
-## 📌 Issue relacionada
+## 📌 Related Issue
 Closes #
 
-## 🧪 Como testar
-Explique como validar esta PR.
+## 🧪 How to test
+Explain how to validate this PR.
 
 ## ✔️ Checklist
-- [ ] Código rodando localmente
-- [ ] Testes realizados
-- [ ] Nenhum console/log desnecessário
-- [ ] Documentação atualizada (se necessário)
+- [ ] Code running locally
+- [ ] Tests executed
+- [ ] No unnecessary console logs
+- [ ] Documentation updated (if necessary)

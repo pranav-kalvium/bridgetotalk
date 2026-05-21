@@ -1,4 +1,4 @@
-# ADR-XXX â€“ <Title>
+# ADR-XXX – <Title>
 
 ## Status
 Proposed | Accepted | Rejected | Superseded
@@ -23,7 +23,7 @@ This section should be concise and unambiguous.
 
 ## Alternatives Considered
 
-### Option 1 â€“ <Name>
+### Option 1 – <Name>
 Brief description.
 
 **Pros:**
@@ -34,7 +34,7 @@ Brief description.
 
 ---
 
-### Option 2 â€“ <Name>
+### Option 2 – <Name>
 Brief description.
 
 **Pros:**

@@ -8,11 +8,11 @@ import org.springframework.data.jpa.domain.Specification;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class QueueEspecification {
+public class QueueSpecification {
 
     public static Specification<QueueJpaEntity> withOptionalFiltersByCompany(QueueFilter filter, UUID companyId) {
 
-        // implementa o toPredicate da interface Specification
+        // Implements the toPredicate method of the Specification interface
         return (root, query, criteriaBuilder) -> {
 
             var predicates = new ArrayList<Predicate>();
@@ -24,7 +24,7 @@ public class QueueEspecification {
                 predicates.add(criteriaBuilder.isNull(root.get("deletedAt")));
             }
 
-            //by company
+            // By company
             predicates.add(criteriaBuilder.equal(root.get("companyId"), companyId));
 
             filter.name()

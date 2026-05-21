@@ -32,18 +32,18 @@ public class FakeDataSeeder {
         return args -> {
             log.info("Starting database initialization with fake data...");
 
-            var faker = new Faker(new Locale("pt-BR"));
+            var faker = new Faker(new Locale("en-US"));
 
-            // Verificar se jÃ¡ tem dados
+            // Check if data already exists
             if (!manageCompanyUseCase.list().isEmpty()) {
                 log.info("Database already contains data. Skipping initialization.");
                 return;
             }
 
-            // Criar empresas
+            // Create companies
             var companies = createCompanies(faker, manageCompanyUseCase);
 
-            // Criar agentes para cada empresa
+            // Create agents for each company
             for (Company company : companies) {
                 createAgents(faker, manageAgentUseCase, company.getId());
             }
@@ -56,13 +56,13 @@ public class FakeDataSeeder {
     private List<Company> createCompanies(Faker faker, ManageCompanyUseCase service) {
         var companies = new ArrayList<Company>();
 
-        // Templates de empresas variadas
+        // Templates of varied companies
         String[][] companyTemplates = {
-                {"TechStart", "techstart", "Startup de tecnologia"},
-                {"MegaRetail", "megaretail", "Grande rede de varejo"},
-                {"HealthCare Plus", "healthcareplus", "ClÃ­nica mÃ©dica"},
+                {"TechStart", "techstart", "Technology startup"},
+                {"MegaRetail", "megaretail", "Large retail chain"},
+                {"HealthCare Plus", "healthcareplus", "Medical clinic"},
                 {"FinanceHub", "financehub", "Fintech"},
-                {"EduLearn", "edulearn", "Plataforma educacional"}
+                {"EduLearn", "edulearn", "Educational platform"}
         };
 
         Plan[] plans = Plan.values();
@@ -104,7 +104,7 @@ public class FakeDataSeeder {
                     companyId,
                     firstName + " " + lastName,
                     email,
-                    "$2a$10$dummyHashForTesting", // Senha hasheada fake
+                    "$2a$10$dummyHashForTesting", // Fake hashed password
                     roles[i]
             );
 

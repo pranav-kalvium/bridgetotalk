@@ -65,8 +65,8 @@ public class AgentController {
                                                                            description = "Agent status",
                                                                            schema = @Schema(implementation = AgentStatus.class)
                                                                 )
-                                                                @ValidEnum(enumClass = AgentStatus.class,
-                                                                           message = "Status invÃ¡lido. Valores permitidos: AVAILABLE, BUSY, PAUSED, OFFLINE")
+                                                                 @ValidEnum(enumClass = AgentStatus.class,
+                                                                           message = "Invalid status. Allowed values: AVAILABLE, BUSY, PAUSED, OFFLINE")
                                                                 @RequestParam(required = false) String status,
                                                                 @RequestParam(required = false) boolean inactive,
                                                                 @RequestParam(required = false) String sortBy,

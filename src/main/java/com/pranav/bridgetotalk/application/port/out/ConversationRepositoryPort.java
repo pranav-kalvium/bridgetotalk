@@ -12,9 +12,9 @@ public interface ConversationRepositoryPort {
 
     Optional<Conversation> findById(UUID id);
 
-    // MÃ©todo para buscar conversas prontas para roteamento
+    // Method to search for conversations ready for routing
     List<Conversation> findWaitingInQueue(UUID companyId);
 
-    // MÃ©todo para buscar conversas ativas de um agente especÃ­fico
+    // Method to search for active conversations of a specific agent
     List<Conversation> findActiveByAgentId(UUID agentId);
 }

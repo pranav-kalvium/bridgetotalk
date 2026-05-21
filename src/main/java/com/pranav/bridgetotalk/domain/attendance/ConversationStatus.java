@@ -1,11 +1,11 @@
 package com.pranav.bridgetotalk.domain.attendance;
 
 public enum ConversationStatus {
-    WAITING_IN_QUEUE("Waiting in Queue"), // A conversa chegou e estÃ¡ aguardando um agente.
-    IN_PROGRESS("In Progress"),           // Um agente estÃ¡ ativo na conversa.
-    WAITING_FOR_CUSTOMER("Waiting for Customer"), // Agente respondeu, aguardando a prÃ³xima mensagem do cliente.
-    PENDING("Pending"),                   // Pausado ou em espera por um terceiro.
-    CLOSED("Closed");                     // Conversa finalizada e arquivada.
+    WAITING_IN_QUEUE("Waiting in Queue"), // The conversation has arrived and is waiting for an agent.
+    IN_PROGRESS("In Progress"),           // An agent is active in the conversation.
+    WAITING_FOR_CUSTOMER("Waiting for Customer"), // Agent responded, waiting for the customer's next message.
+    PENDING("Pending"),                   // Paused or on hold for a third party.
+    CLOSED("Closed");                     // Conversation finalized and archived.
 
     private final String description;
 

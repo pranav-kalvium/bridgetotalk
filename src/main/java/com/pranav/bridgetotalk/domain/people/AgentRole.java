@@ -1,9 +1,9 @@
 package com.pranav.bridgetotalk.domain.people;
 
 public enum AgentRole {
-    ADMIN("Admin"),       // Acesso total, pode gerenciar empresas, planos, e configuraÃ§Ãµes globais.
-    MANAGER("Manager"),   // Gerente de equipe. Pode gerenciar agentes, filas e relatÃ³rios da sua empresa.
-    AGENT("Agent");       // Atendente padrÃ£o. Pode gerenciar suas prÃ³prias conversas.
+    ADMIN("Admin"),       // Full access, can manage companies, plans, and global configurations.
+    MANAGER("Manager"),   // Team manager. Can manage agents, queues, and reports of their company.
+    AGENT("Agent");       // Standard agent. Can manage their own conversations.
 
     private final String description;
 

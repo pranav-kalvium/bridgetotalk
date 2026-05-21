@@ -7,12 +7,12 @@ CREATE TABLE agent_queues (
                               agent_id UUID NOT NULL,
                               queue_id UUID NOT NULL,
 
-    -- Metadados da relaÃ§Ã£o
-                              priority INT DEFAULT 1 NOT NULL, -- 1 = Alta, 2 = MÃ©dia, etc.
+    -- Relationship metadata
+                              priority INT DEFAULT 1 NOT NULL, -- 1 = High, 2 = Medium, etc.
                               added_at TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL,
 
-    -- Constraints de Integridade
-                              PRIMARY KEY (agent_id, queue_id), -- Chave composta impede duplicidade
+    -- Integrity Constraints
+                              PRIMARY KEY (agent_id, queue_id), -- Composite key prevents duplicates
 
                               CONSTRAINT fk_aq_agent FOREIGN KEY (agent_id)
                                   REFERENCES agents(id) ON DELETE CASCADE,
@@ -21,11 +21,11 @@ CREATE TABLE agent_queues (
                                   REFERENCES queues(id) ON DELETE CASCADE
 );
 
--- Ãndices para performance
--- O PK jÃ¡ indexa (agent_id, queue_id).
--- index para o caminho inverso (buscar todos os agentes de uma fila):
+-- Performance indices
+-- The PK already indexes (agent_id, queue_id).
+-- Index for reverse lookup (retrieve all agents assigned to a queue):
 CREATE INDEX idx_aq_queue ON agent_queues(queue_id);
 
--- ComentÃ¡rios
+-- Comments
 COMMENT ON TABLE agent_queues IS 'Associative table linking agents to their assigned queues (Many-to-Many)';
 COMMENT ON COLUMN agent_queues.priority IS 'Priority level of the agent in this specific queue';

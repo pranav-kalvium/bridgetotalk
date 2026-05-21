@@ -18,7 +18,7 @@ public class WeeklySchedule {
     }
 
     public Map<DayOfWeek, DailySchedule> getSchedules() {
-        return Map.copyOf(schedules); // retorna cÃ³pia imutÃ¡vel para preservar encapsulamento
+        return Map.copyOf(schedules); // Returns an immutable copy to preserve encapsulation
     }
 
     /**

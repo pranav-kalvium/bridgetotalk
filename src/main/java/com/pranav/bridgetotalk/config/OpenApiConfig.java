@@ -25,8 +25,8 @@ public class OpenApiConfig {
                         )
                 )
                 .externalDocs(new ExternalDocumentation()
-                        .description("RepositÃ³rio no GitHub")
-                        .url("https://github.com/pranav-kalvium/bridgetalk")
+                        .description("GitHub Repository")
+                        .url("https://github.com/pranav-kalvium/bridgetotalk")
                 );
     }
 }

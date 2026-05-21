@@ -114,7 +114,7 @@ public class Company {
 
     private void validateStatusTransition(CompanyStatus current, CompanyStatus target) {
         if (current == target) {
-            throw new BusinessException("A empresa jÃ¡ estÃ¡ com o status: " + target);
+            throw new BusinessException("Company is already in status: " + target);
         }
     }
 }

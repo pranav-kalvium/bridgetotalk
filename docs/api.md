@@ -21,16 +21,16 @@ curl --location 'http://localhost:8080/api/v1/companies' \
 "id": "668301bb-f6be-49bd-a315-d08a1491a186",
 "name": "Cool company",
 "slug": "coolcompany",
-"email": "contato@startcompany.com",
-"phone": "+5511999999999",
+"email": "contact@startcompany.com",
+"phone": "+15551234567",
 "document": "coolcompany",
 "status": "ACTIVE",
 "plan": "PRO",
 "settings": {
 "maxAgents": 20,
 "maxQueues": 20,
-"timezone": "America/Sao_Paulo",
-"language": "pt",
+"timezone": "America/New_York",
+"language": "en",
 "createdAt": "2025-11-21T18:05:16.756701Z",
 "updatedAt": "2025-11-21T18:05:16.756706Z",
 "plan": "PRO"
@@ -48,7 +48,7 @@ curl --location 'http://localhost:8080/api/v1/companies' \
 curl --location --request PUT 'http://localhost:8080/api/v1/companies/cb031bf8-d0c7-421a-b23e-0eeff82c825b' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "phone": "+5511955661111",
+    "phone": "+15551234568",
     "email": "newemail@startcompany.com"
 }'
 ```
@@ -63,8 +63,8 @@ curl --location --request PUT 'http://localhost:8080/api/v1/companies/cb031bf8-d
 --data '{
 "maxAgents": 57,
 "maxQueues": 57,
-"timezone": "America/Sao_Paulo",
-"language": "pt",
+"timezone": "America/New_York",
+"language": "en",
 "plan": "ENTERPRISE"
 }'
 ```

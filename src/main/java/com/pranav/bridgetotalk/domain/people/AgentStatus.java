@@ -1,10 +1,10 @@
 package com.pranav.bridgetotalk.domain.people;
 
 public enum AgentStatus {
-    AVAILABLE("Available"),       // Pode receber novas conversas (rotaÃ§Ã£o).
-    BUSY("Busy"),                 // EstÃ¡ em uma conversa, mas ainda pode ser elegÃ­vel dependendo da estratÃ©gia.
-    PAUSED("Paused"),             // IndisponÃ­vel (ex: almoÃ§o, reuniÃ£o). NÃ£o recebe novas conversas.
-    OFFLINE("Offline");           // Deslogado do sistema.
+    AVAILABLE("Available"),       // Can receive new conversations (rotation).
+    BUSY("Busy"),                 // Is in a conversation, but may still be eligible depending on the strategy.
+    PAUSED("Paused"),             // Unavailable (e.g. lunch, meeting). Does not receive new conversations.
+    OFFLINE("Offline");           // Logged out of the system.
 
     private final String description;
 
@@ -21,7 +21,7 @@ public enum AgentStatus {
         try {
             return AgentStatus.valueOf(value.toUpperCase());
         } catch (IllegalArgumentException e) {
-            throw new IllegalStateException("Valor invÃ¡lido apÃ³s validaÃ§Ã£o: " + value);
+            throw new IllegalStateException("Invalid value after validation: " + value);
         }
     }
 }

@@ -5,7 +5,7 @@ FROM eclipse-temurin:25-jdk AS builder
 
 WORKDIR /app
 
-# Copia apenas arquivos necessários para resolver dependências primeiro
+# Copy only necessary files to resolve dependencies first
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
@@ -13,10 +13,10 @@ COPY pom.xml .
 RUN chmod +x mvnw
 RUN ./mvnw -B -q dependency:go-offline
 
-# Copia o restante do código
+# Copy the rest of the code
 COPY src src
 
-# Build do artefato
+# Build the artifact
 RUN ./mvnw -B -q clean package -DskipTests
 
 
@@ -27,13 +27,13 @@ FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 
-# Copia apenas o jar final
+# Copy only the final jar
 COPY --from=builder /app/target/*.jar app.jar
 
-# Porta padrão da aplicação
+# Default application port
 EXPOSE 8080
 
-# Configuração explícita do profile
+# Explicit profile configuration
 ENV SPRING_PROFILES_ACTIVE=docker
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

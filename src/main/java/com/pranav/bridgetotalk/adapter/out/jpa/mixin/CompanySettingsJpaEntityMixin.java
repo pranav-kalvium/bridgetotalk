@@ -5,5 +5,5 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class CompanySettingsJpaEntityMixin {
 
     @JsonIgnore
-    abstract Object getCompany(); // evita serializaÃ§Ã£o recursiva
+    abstract Object getCompany(); // Avoids recursive serialization
 }

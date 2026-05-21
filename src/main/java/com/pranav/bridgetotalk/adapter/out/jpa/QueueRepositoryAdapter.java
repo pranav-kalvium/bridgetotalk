@@ -2,7 +2,7 @@ package com.pranav.bridgetotalk.adapter.out.jpa;
 
 import com.pranav.bridgetotalk.adapter.in.web.dto.queue.QueueFilter;
 import com.pranav.bridgetotalk.adapter.out.jpa.mapper.QueueJpaMapper;
-import com.pranav.bridgetotalk.adapter.out.jpa.spec.QueueEspecification;
+import com.pranav.bridgetotalk.adapter.out.jpa.spec.QueueSpecification;
 import com.pranav.bridgetotalk.adapter.out.jpa.spec.SortParams;
 import com.pranav.bridgetotalk.application.port.out.QueueRepositoryPort;
 import com.pranav.bridgetotalk.domain.attendance.Queue;
@@ -66,11 +66,11 @@ public class QueueRepositoryAdapter implements QueueRepositoryPort {
     @Override
     public List<Queue> filterQueuesByCompanyId(QueueFilter queueFilter, UUID companyId) {
 
-        var especification = QueueEspecification.withOptionalFiltersByCompany(queueFilter, companyId);
+        var specification = QueueSpecification.withOptionalFiltersByCompany(queueFilter, companyId);
         var sortField = SortParams.validateFieldToSort(queueFilter.queryOptions().sortBy().orElse(null), "queue");
         var sortDirection = SortParams.validateDirection(queueFilter.queryOptions().sortDirection().orElse(null));
 
-        return queueRepository.findAll(especification, Sort.by(sortDirection, sortField))
+        return queueRepository.findAll(specification, Sort.by(sortDirection, sortField))
                               .stream()
                               .map(mapper::toDomain)
                               .toList();

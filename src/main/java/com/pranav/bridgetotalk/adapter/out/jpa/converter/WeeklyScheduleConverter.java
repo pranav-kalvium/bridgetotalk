@@ -20,7 +20,7 @@ import java.util.Map;
 public class WeeklyScheduleConverter implements AttributeConverter<WeeklySchedule, String> {
 
     private static final ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule())
-                .registerModule(new ParameterNamesModule()) // Permite ler nomes de parÃ¢metros de construtores
+                .registerModule(new ParameterNamesModule()) // Allows reading parameter names of constructors
                 .addMixIn(DailySchedule.class, DailyScheduleMixIn.class)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
@@ -31,7 +31,7 @@ public class WeeklyScheduleConverter implements AttributeConverter<WeeklySchedul
         try {
             return mapper.writeValueAsString(attribute.getSchedules());
         } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException("Erro ao serializar", e);
+            throw new IllegalArgumentException("Error serializing", e);
         }
     }
 
@@ -40,7 +40,7 @@ public class WeeklyScheduleConverter implements AttributeConverter<WeeklySchedul
         if (dbData == null || dbData.isBlank()) return null;
         try {
             var root = mapper.readTree(dbData);
-            // Se o JSON vier embrulhado em "schedules", pegamos o nÃ³ interno
+            // If the JSON is wrapped in "schedules", we get the internal node
             var schedulesNode = root.has("schedules") ? root.get("schedules") : root;
 
             var map = mapper.convertValue(
@@ -49,7 +49,7 @@ public class WeeklyScheduleConverter implements AttributeConverter<WeeklySchedul
             );
             return WeeklySchedule.of(map);
         } catch (Exception e) {
-            throw new IllegalArgumentException("Falha ao converter WeeklySchedule: " + e.getMessage(), e);
+            throw new IllegalArgumentException("Failed to convert WeeklySchedule: " + e.getMessage(), e);
         }
     }
 }

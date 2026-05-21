@@ -82,7 +82,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 
-    // EspecÃ­fico para o erro de negÃ³cio de duplicidade (409)
+    // Specific for business error of duplication (409)
     @ExceptionHandler(ResourceAlreadyExistsException.class)
     public ResponseEntity<ApiError> handleResourceAlreadyExists(
             ResourceAlreadyExistsException ex,
@@ -128,7 +128,7 @@ public class GlobalExceptionHandler {
                 var validValues = Arrays.toString(invalidFormatException.getTargetType().getEnumConstants());
 
                 var message = String.format(
-                        "Valor invÃ¡lido '%s' para o campo '%s'. Valores permitidos: %s",
+                        "Invalid value '%s' for field '%s'. Allowed values: %s",
                         invalidValue, field, validValues
                 );
 

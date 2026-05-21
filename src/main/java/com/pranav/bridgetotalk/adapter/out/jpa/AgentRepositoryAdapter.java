@@ -53,11 +53,11 @@ public class AgentRepositoryAdapter implements AgentRepositoryPort {
     @Override
     public List<Agent> findAllActiveAgentsByCompanyId(AgentFilter agentFilter, UUID companyId) {
 
-        var especification = AgentSpecification.withOptionalFiltersByCompany(agentFilter, companyId);
+        var specification = AgentSpecification.withOptionalFiltersByCompany(agentFilter, companyId);
         var sortField = SortParams.validateFieldToSort(agentFilter.queryOptions().sortBy().orElse(null), "agent");
         var sortDirection = SortParams.validateDirection(agentFilter.queryOptions().sortDirection().orElse(null));
 
-        return repository.findAll(especification, Sort.by(sortDirection, sortField))
+        return repository.findAll(specification, Sort.by(sortDirection, sortField))
                 .stream()
                 .map(mapper::toDomain)
                 .toList();

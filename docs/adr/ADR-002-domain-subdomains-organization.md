@@ -1,4 +1,4 @@
-# ADR-002 â€“ Domain Organization into Subdomains
+# ADR-002 – Domain Organization into Subdomains
 
 ## Status
 Accepted

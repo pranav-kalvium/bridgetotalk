@@ -1,4 +1,4 @@
-# BridgeToTalk â€” Java 25, Spring Boot 4, Hexagonal Architecture (Ports & Adapters), DDD, Multi-Tenant SaaS
+# BridgeToTalk — Java 25, Spring Boot 4, Hexagonal Architecture (Ports & Adapters), DDD, Multi-Tenant SaaS
 
 
 [![Java Version](https://img.shields.io/badge/Java-25-blue.svg)](https://www.oracle.com/java/technologies/javase/25-downloads.html)
@@ -10,7 +10,7 @@
 [![Multi-Tenant](https://img.shields.io/badge/Tenancy-Multi--Tenant%20SaaS-lightblue)]()
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-## ðŸŒŸ Overview
+## 🌟 Overview
 
 **BridgetoTalk** is a modern, scalable, multi-tenant backend application designed to centralize and manage customer 
 service conversations across various external channels (WhatsApp, Telegram, etc.). It serves as a comprehensive portfolio 
@@ -24,7 +24,7 @@ managing the entire lifecycle of a conversation (from **WAITING_IN_QUEUE** to **
 
 ---
 
-## ðŸŽ¯ Who is this project for?
+## 🎯 Who is this project for?
 
 This project is ideal for:
 
@@ -36,18 +36,18 @@ This project is ideal for:
 
 ---
 
-## ðŸ’Ž Engineering Highlights
+## 💎 Engineering Highlights
 
 This isn't just another CRUD. It's a laboratory for high-level software engineering:
 
 * **Rich Domain Model:** No "Anemic Models" here. Business logic (like queue availability and schedule overlaps) is encapsulated within Domain Entities and Value Objects.
 * **Hexagonal Architecture:** Strict separation between business rules and infrastructure. Try swapping the database or the web framework, 
-the domain won't care, because he domain has zero dependencies on Spring or JPA.
+the domain won't care, because the domain has zero dependencies on Spring or JPA.
 * **Strategic DDD:** Clear boundaries between Bounded Contexts (`attendance`, `organization`, `people`).
 * **Clean Code & SOLID:** High cohesion, low coupling, and meaningful naming.
 * **Value Objects:** Extensive use of Java Records to represent domain concepts like `TimeRange` and `WeeklySchedule`.
 
-## ðŸ—ï¸ Architecture and Design
+## 🏗️ Architecture and Design
 
 This project is built using the **Hexagonal Architecture (Ports and Adapters)** principle. This structure ensures:
 
@@ -55,7 +55,7 @@ This project is built using the **Hexagonal Architecture (Ports and Adapters)** 
 2.  **Testability:** The Application and Domain layers can be unit-tested without external dependencies.
 3.  **Future-Proofing:** Easy adaptation to new technologies (e.g., migrating from PostgreSQL to DynamoDB or adding Kafka for messaging).
 
-## ðŸ§  Decision Log (ADRs)
+## 🧠 Decision Log (ADRs)
 
 Software architecture is about trade-offs. I've documented the "why" behind major decisions:
 
@@ -113,15 +113,15 @@ flowchart LR
 
 If you want to understand the architecture, start here:
 
-1. domain/organization/Company.java, CompanySettings.java â€“ core domain entity
+1. domain/organization/Company.java, CompanySettings.java – core domain entity
 2. domain/attendance/Queue.java, Conversation.java, Message.java - core domain entities to main flow of application
 3. domain/people/Agent.java, Customer.java - core domain entities that represent the actors in main flow of application
-4. application/port/in â€“ use case definitions
-5. application/service â€“ business logic orchestration
-6. adapter/out/jpa/* â€“ persistence adapters
+4. application/port/in – use case definitions
+5. application/service – business logic orchestration
+6. adapter/out/jpa/* – persistence adapters
 
 
-## ðŸ› ï¸ Technology Stack
+## 🛠️ Technology Stack
 
 * **Language:** Java 25
 * **Framework:** Spring Boot 4
@@ -130,7 +130,7 @@ If you want to understand the architecture, start here:
 
 ---
 
-## âš™ï¸ Initial Setup
+## ⚙️ Initial Setup
 
 ### Prerequisites
 
@@ -140,7 +140,7 @@ If you want to understand the architecture, start here:
 
 
 
-### ðŸš€ Running with Docker (Recommended)
+### 🚀 Running with Docker (Recommended)
 
 You can run the entire application **without installing Java or Maven**.
 
@@ -177,7 +177,7 @@ Expected response:
 {"status":"UP"}
 ```
 
-### ðŸ§‘â€ðŸ’» Running Locally (Java 25)
+### 🧑‍💻 Running Locally (Java 25)
 
 If you prefer to run the application without Docker:
 
@@ -192,13 +192,13 @@ If you prefer to run the application without Docker:
 ./mvnw spring-boot:run
 ```
 
-## ðŸ§ª Testing the API
+## 🧪 Testing the API
 Once the application is running, you can use the cURL examples provided below to interact with the system.
 
 The API follows REST principles and uses UUIDs for all identifiers to ensure global uniqueness and prevent ID enumeration,
 a standard practice for secure multi-tenant SaaS.
 
-## ðŸ“¡ API Examples (cURL)
+## 📡 API Examples (cURL)
 
 A collection of real examples to help quickly test the API.
 See [docs/api.md](./docs/api.md) for more details.
@@ -212,9 +212,9 @@ agents who are better prepared to resolve specific types of issues;
 - Redis cache for active queues;
 
 
-## â­ Contributing & Feedback
+## ⭐ Contributing & Feedback
 
 If this project helped you understand Hexagonal Architecture or DDD in Java,
-consider giving it a â­.
+consider giving it a ⭐.
 
 Feedback, discussions, and architectural suggestions are very welcome.

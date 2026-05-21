@@ -1,23 +1,23 @@
-# Contribuindo com este projeto
+# Contributing to this project
 
-Este projeto utiliza **Git Flow** como estratégia de branching.  
-Os principais fluxos de trabalho estão descritos abaixo.
+This project uses **Git Flow** as its branching strategy.  
+The main workflows are described below.
 
 ---
 
-## 🌿 **Branches principais**
+## 🌿 **Main Branches**
 
 ### `main`
-Contém somente código **estável e pronto para produção**.  
-Nenhum commit direto é permitido.
+Contains only **stable and production-ready** code.  
+No direct commits are allowed.
 
 ### `develop`
-Contém código da **próxima versão**, agregando features já concluídas.
+Contains code for the **next release**, aggregating completed features.
 
 ---
 
-## 🛠 Branches de suporte
+## 🛠 Support Branches
 
 ### 🔹 Feature
-Criadas a partir de `develop`.
+Created from `develop`.
 

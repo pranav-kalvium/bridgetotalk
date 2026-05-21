@@ -36,7 +36,7 @@ public class CompanySettingsJpaEntity {
     private String language;
 
     @OneToOne(cascade = {CascadeType.PERSIST})
-    @MapsId //settings Ã© uma extensÃ£o de Company
+    @MapsId // settings is an extension of Company
     @JoinColumn(name = "company_id")
     private CompanyJpaEntity company;
 

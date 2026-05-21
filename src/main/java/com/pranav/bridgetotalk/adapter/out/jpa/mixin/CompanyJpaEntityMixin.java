@@ -5,6 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class CompanyJpaEntityMixin {
 
     @JsonIgnore
-    abstract Object getSettings(); // ignorar relaÃ§Ã£o 1-1 reversa (prevent loop)
+    abstract Object getSettings(); // Ignore 1-1 reverse relationship (prevent loop)
 
 }
